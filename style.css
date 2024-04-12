@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    top: 0;
+}
+
+div.image-sidebar,
+div.main {
+    border: 1px solid red;
+}
+
+div.image-sidebar {
+    flex-grow: 1;
+    background-color: lightblue;
+    min-width: 30vw;;
+}
+
+div.main {
+    flex-grow: 2;
+    background-color: lightgreen;
+    max-width: 70vw;
+}
+
+div.logo {
+    position: relative;
+    top: 30vh;
+}
+
+form {  
+    position: relative;
+    top: 30vh;   
+}
+
+div.main-form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background-color: darkgreen;
+    width: 100%;
+    height: 35vh;
+}
+
+div.sign-up-form {
+    display: flex;
+    gap: 10vw;
+    
+}
+
+legend {
+    background-color: darkgreen;
+    width: 100%;
+    
+}
+
+label {
+    display: block;
+    width: 100%;
+}
+
+
+/*div.sign-up-form label,
+div.sign-up-form input {
+    position: relative;
+    margin-left: 40px;
+}
+
+div.main-form .sign-up-form {
+    flex: 50%;
+}
+*/
