@@ -16,50 +16,49 @@
 
         </div>
         <div class="main">
-            <h2>This is my header. Welcome to the page!</h2>
+            <h2>HEADER GOES HERE</h2>
             <form action="">
-                <legend>Fill this out!</legend>
-                <div class="main-form">
-                
-                    <div class="sign-up-form name-details">
-                        <div class="full-name form-data">
-                            <label for="first-name">First Name</label>
-                            <input type="text" name="first-name" id="first-name" required>
+                    <fieldset>
+                        <legend>Let's do it!</legend>
+                        <div class="sign-up-form name-details">
+                            <div class="full-name form-data">
+                                <label for="first-name">First Name</label>
+                                <input type="text" name="first-name" id="first-name" required>
+                            </div>
+                            <div class="full-name form-data">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name" id="last-name" required>
+                            </div>
                         </div>
-                        <div class="full-name form-data">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last-name" id="last-name" required>
+                        <div class="sign-up-form contact-details">
+                            <div class="info form-data">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div class="info form-data">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" name="phone" id="phone">
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="sign-up-form contact-details">
-                        <div class="info form-data">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required>
+                        <div class="sign-up-form password-details">
+                            <div class=" password form-data">
+                                <label for="pwd">Password</label>
+                                <input type="password" name="pwd" id="pwd" required>
+                            </div>
+                            <div class="password form-data">
+                                <label for="pwd-confirm">Confirm Password</label>
+                                <input type="password" name="pwd-confirm" id="pwd-confirm" required>
+                            </div>
                         </div>
-                        <div class="info form-data">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" name="phone" id="phone">
-                        </div>
-                    </div>
-
-                    <div class="sign-up-form password-details">
-                        <div class=" password form-data">
-                            <label for="pwd">Password</label>
-                            <input type="password" name="pwd" id="pwd" required>
-                        </div>
-                        <div class="password form-data">
-                            <label for="pwd-confirm">Confirm Password</label>
-                            <input type="password" name="pwd-confirm" id="pwd-confirm" required>
-                        </div>
-                    </div>
-
-                </div>
+                    </fieldset>
 
                 <div class="submit-btn">
-                    <button type="submit" class>Create Account</button>
+                    <button type="submit" class="btn">Create Account</button>
                 </div>
             </form>
+            <p class="log-in">
+                Already have an account? <a href="">Log in</a>
+            </p>
         </div>
     </div>
 </body>

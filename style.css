@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body, html {
     margin: 0;
     padding: 0;
@@ -10,25 +11,20 @@ body, html {
     display: flex;
     width: 100%;
     height: 100vh;
-    border: 1px solid black;
-    top: 0;
 }
 
-div.image-sidebar,
+/*div.image-sidebar,
 div.main {
     border: 1px solid red;
-}
+}*/
+
+/* Styling the image sidebar */
 
 div.image-sidebar {
     flex-grow: 1;
     background-color: lightblue;
     min-width: 30vw;;
-}
-
-div.main {
-    flex-grow: 2;
-    background-color: lightgreen;
-    max-width: 70vw;
+    background-image: url(photo-1712741842792-763796aa9dfe.avif);
 }
 
 div.logo {
@@ -36,30 +32,67 @@ div.logo {
     top: 30vh;
 }
 
-form {  
-    position: relative;
-    top: 30vh;   
+
+/* Styling the main content */
+
+div.main {
+    flex-grow: 2;
+    background-color: rgba(247, 235, 240, 0.486);
+    /*background: linear-gradient(white, rgba(224, 149, 187, .5));*/
+    max-width: 70vw;
+    box-shadow: -2px 0px 2px 2px rgba(243, 192, 205, .3);
 }
 
-div.main-form{
+/* Header styling */
+
+div h2 {
+    margin-left: 50px;
+    color: #596D48
+}
+
+
+/* Form styling */
+
+form {  
+    margin-top: 30vh;
+    overflow: hidden;  
+}
+
+fieldset {
+    border: none;
+    /*margin: 0px 0px 0px 50px;*/
+    height: 35vh;
+    width: 100%;
+    margin: auto;
+    background: linear-gradient(white, rgba(240, 126, 183, 0.24));
+    box-shadow: 0px 5px 2px -1px rgba(226, 176, 205, .8), 0 -2px 2px 2px rgba(255, 255, 255, .9);  
+}
+
+/*div.main-form{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    background-color: darkgreen;
+   
     width: 100%;
     height: 35vh;
-}
+    /*background-color: rgb(247, 149, 203 / 30%);*/
+    /*background: linear-gradient(rgba(224, 149, 187, .5), rgba(224, 149, 187, .8));
+    background: linear-gradient(white, rgba(240, 126, 183, 0.24));
+    box-shadow: 0px 5px 2px -1px rgba(226, 176, 205, .8), 0 -2px 2px 2px rgba(255, 255, 255, .9);
+}*/
 
+/* Creates rows for input boxes*/
 div.sign-up-form {
+    clear: left;
     display: flex;
-    gap: 10vw;
-    
+    gap: 10vw;  
+    width: 100px;
+    margin: auto auto 15px 50px;
 }
 
-legend {
-    background-color: darkgreen;
-    width: 100%;
-    
+fieldset legend {
+    float: left;
+    margin: 20px auto 50px 50px;
 }
 
 label {
@@ -67,14 +100,15 @@ label {
     width: 100%;
 }
 
-
-/*div.sign-up-form label,
-div.sign-up-form input {
-    position: relative;
-    margin-left: 40px;
+button.btn {
+    margin: 50px auto 20px 65px;
+    width: 15vw;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    background-color: #596D48;
 }
 
-div.main-form .sign-up-form {
-    flex: 50%;
+p.log-in {
+    margin-left: 65px;
 }
-*/
