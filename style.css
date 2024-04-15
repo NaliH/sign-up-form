@@ -60,6 +60,17 @@ div h2 {
     color: #596D48
 }
 
+p.disclaimer {
+    position: relative; 
+}
+
+p.disclaimer > span {
+    position: absolute;
+    right: 0;
+    top: 10vh;
+
+}
+
 
 /* Form styling */
 
@@ -122,6 +133,8 @@ button.btn {
     border-radius: 5px;
     background-color: #596D48;
 }
+
+
 
 p.log-in {
     margin-left: 65px;
