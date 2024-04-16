@@ -91,32 +91,33 @@ fieldset {
     width: 100%;
     margin: auto;
     background: linear-gradient(white, rgba(240, 126, 183, 0.24));
-    box-shadow: 0px 5px 2px -1px rgba(226, 176, 205, .8), 0 -2px 2px 2px rgba(255, 255, 255, .9);  
-    
+    box-shadow: 0px 5px 2px -1px rgba(226, 176, 205, .8), 0 -2px 2px 2px rgba(255, 255, 255, .9);    
 }
 
-input{
-    height: 20px;
-    width: 100%
-}
+
 
 /* Creates rows for input boxes*/
 div.sign-up-form {
     clear: left;
     display: flex;
-    /*width: 100px;*/
-    /*margin: auto auto 15px 50px;*/
     margin-top: 15px;
     margin-left: 50px;  
 }
 
-div.sign-up-form label {
-    margin-right: 10px;
+div.data:nth-of-type(1){
+    margin-right: 20%;
 }
 
 fieldset legend {
     float: left;
     margin: 20px auto 50px 50px;
+}
+
+input{
+    height: 20px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
 }
 
 label {
@@ -134,14 +135,8 @@ button.btn {
     background-color: #596D48;
 }
 
-
-
 p.log-in {
     margin-left: 65px;
-}
-
-div.data:nth-of-type(1){
-    margin-right: 20%;
 }
 
 @media screen and (max-width: 650px) {
@@ -164,6 +159,34 @@ div.data:nth-of-type(1){
         margin-left: 0%;
     }
 
+}
+
+/*Validation styles*/
+
+div.data input:focus {
+    border-width: 2px;
+}
+
+input:required:valid,
+input:focus:valid {
+    border: 1px solid rgba(15, 80, 15, 0.8); 
+    outline: .5px solid rgba(165, 240, 165, 0.8);
+    background-color: rgba(165, 240, 165, 0.8);
+}
+
+input:focus:invalid,
+input:invalid:not(:placeholder-shown) {
+    border: 1px solid rgba(255, 0, 0, .8);
+    outline: .5px dashed rgba(255, 0, 0, .8);
+    background-color: rgba(231, 117, 117, 0.8);
+
+}
+
+input[type="tel"]:not(:placeholder-shown),
+input[type="tel"]:focus {
+    border: 2px solid rgba(235, 225, 138, 0.8);
+    outline: .5px solid rgba(236, 174, 102, 0.8);
+    background-color: rgba(231, 220, 117, 0.8);
 }
 
 
