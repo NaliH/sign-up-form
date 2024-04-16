@@ -50,7 +50,6 @@ div.main {
     /*background: linear-gradient(white, rgba(224, 149, 187, .5));*/
     min-width: 70%;
     box-shadow: -2px 0px 2px 2px rgba(243, 192, 205, .3);
-
 }
 
 /* Header styling */
@@ -68,7 +67,8 @@ p.disclaimer > span {
     position: absolute;
     right: 0;
     top: 10vh;
-
+    font-size: 10px;
+    color: #596D48;
 }
 
 
