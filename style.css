@@ -8,55 +8,82 @@ body, html {
     height: 100%;   
 }
 
-html {
-    width: 100%;
-}
-
 .container {
     display: flex;
     width: 100%;
     min-height: 100%;
+    color: white;  
 }
-
-/*div.image-sidebar,
-div.main {
-    border: 1px solid red;
-}*/
 
 /* Styling the image sidebar */
 
 div.image-sidebar {
     flex-grow: 1;
     min-width: 30%;
-    background-image: url(photo-1712741842792-763796aa9dfe.avif);
+    background-image: url(images/blue-galaxy.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 div.logo {
-    position: relative;
-    top: 30vh;
+    display: flex;
+    gap: 20px;
+    margin-top: 30vh;
+    height: 120px;
+    max-width: 100vw;
+    background-color: rgba(141, 206, 231, 0.2);
+}
+
+div.logo * {
+    align-self: center;
+}
+
+div.logo p {
+    display: table;
+    font-size: 3vw;
+}
+
+div.logo img {
+    width: 20%;
+    height: auto;
 }
 
 
 /* Styling the main content */
 
 .main {
-    font-family: sans-serif;
     width: 100%;  
+    font-family: sans-serif;
 }
 
 div.main {
     flex-grow: 2;
-    background-color: rgba(247, 235, 240, 0.486);
-    /*background: linear-gradient(white, rgba(224, 149, 187, .5));*/
+    background: linear-gradient(
+        rgb(23, 160, 194) .5%,
+        rgb(0,0,0) 2% 98%,
+        rgb(23, 160, 194) );
     min-width: 70%;
-    box-shadow: -2px 0px 2px 2px rgba(243, 192, 205, .3);
+    box-shadow: -2px 0px 2px 2px rgba(23, 160, 194, .3);
+}
+
+div.logo p,
+div.main h1 {
+    text-shadow: 1px 1px 10px rgba(23, 160, 194, 1);
 }
 
 /* Header styling */
 
-div h2 {
+div.main h1 {
     margin-left: 50px;
-    color: #596D48
+    margin-top: 80px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+span.message-2,
+em.em-1 {
+    color: rgba(23, 160, 194, 0.9);
 }
 
 p.disclaimer {
@@ -68,32 +95,24 @@ p.disclaimer > span {
     right: 0;
     top: 10vh;
     font-size: 10px;
-    color: #596D48;
 }
-
 
 /* Form styling */
 
 form {  
     margin-top: 20vh;
-    width: 100%;
-    border: 0px solid red;
-  
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
-    border: 0px solid black;
-    /*margin: 0px 0px 0px 50px;*/
+    border: none;
     min-width: 0;
-    max-width: 100vw;
-    width: 100%;
-    margin: auto;
-    background: linear-gradient(white, rgba(240, 126, 183, 0.24));
-    box-shadow: 0px 5px 2px -1px rgba(226, 176, 205, .8), 0 -2px 2px 2px rgba(255, 255, 255, .9);    
+    background-color: black;
+    box-shadow: 0 -.5px 3px 1.5px rgba(0, 0, 0, 0.9),
+                0 -4px 2px 2px rgba(23, 160, 194, 0.9),     
+                0px 5px 2px -1px rgba(23, 160, 194, 0.8);    
 }
-
 
 
 /* Creates rows for input boxes*/
@@ -104,13 +123,15 @@ div.sign-up-form {
     margin-left: 50px;  
 }
 
-div.data:nth-of-type(1){
+div.data:nth-child(odd) {
     margin-right: 20%;
 }
 
 fieldset legend {
     float: left;
     margin: 20px auto 50px 50px;
+    font-size: 32px;
+    word-break: break-all;
 }
 
 input{
@@ -121,18 +142,18 @@ input{
 }
 
 label {
-    display: block;
-    width: 100%;
+    display: block; /* places label above input*/
 }
 
 button.btn {
     margin: 50px auto 20px 65px;
     min-width: 20%;
     max-width: 100%;
-    height: 5vh;
+    height: 40px;
     border: none;
     border-radius: 5px;
-    background-color: #596D48;
+    background-color: rgba(23, 160, 194);
+    color: white;
 }
 
 p.log-in {
@@ -140,8 +161,9 @@ p.log-in {
 }
 
 @media screen and (max-width: 650px) {
-    div.sign-up-form {
-      flex-direction: column;
+    div.sign-up-form,
+    div.logo {
+      flex-flow: column wrap;
       flex-wrap: wrap;
     }
 
@@ -150,11 +172,11 @@ p.log-in {
     }
 
     input {
-        width: 65%;
+        width: 50%;
     }
   }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 400px) {
     div.main  * {
         margin-left: 0%;
     }
@@ -178,27 +200,13 @@ input:focus:invalid,
 input:invalid:not(:placeholder-shown) {
     border: 1px solid rgba(255, 0, 0, .8);
     outline: .5px dashed rgba(255, 0, 0, .8);
-    background-color: rgba(231, 117, 117, 0.8);
+    background-color: rgba(245, 237, 237, 0.8);
 
 }
 
 input[type="tel"]:not(:placeholder-shown),
 input[type="tel"]:focus {
-    border: 2px solid rgba(235, 225, 138, 0.8);
+    border: 1px solid rgba(230, 123, 1, 0.8);
     outline: .5px solid rgba(236, 174, 102, 0.8);
     background-color: rgba(231, 220, 117, 0.8);
 }
-
-
-/*div.main-form{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-   
-    width: 100%;
-    height: 35vh;
-    /*background-color: rgb(247, 149, 203 / 30%);*/
-    /*background: linear-gradient(rgba(224, 149, 187, .5), rgba(224, 149, 187, .8));
-    background: linear-gradient(white, rgba(240, 126, 183, 0.24));
-    box-shadow: 0px 5px 2px -1px rgba(226, 176, 205, .8), 0 -2px 2px 2px rgba(255, 255, 255, .9);
-}*/
